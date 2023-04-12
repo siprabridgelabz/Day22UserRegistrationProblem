@@ -11,12 +11,19 @@ namespace Day22UserResigstrationProblem
     {
 
         // [Required(ErrorMessage = "Property check {0} is required")]
-        [RegularExpression("^[A-Z]{1}[A-Za-z]{2,}$", ErrorMessage = "Name should be minimum 3 character and start with caps")]
         // [StringLength(100,MinimumLength =3 ,ErrorMessage = "Name should be minimum 3 character" )]
+        [RegularExpression("^[A-Z]{1}[A-Za-z]{2,}$", ErrorMessage = "Name should be minimum 3 character and start with caps")]
+        [DataType(DataType.Text)]
+
         public string FirstName { get; set; }
 
         [RegularExpression("^[A-Z]{1}[A-Za-z]{2,}$", ErrorMessage = "Name should be minimum 3 character and start with caps")]
+        [DataType(DataType.Text)]
         public string LastName { get; set; }
+
+        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
+        public string Email { get; set; }
     }
 }
 
