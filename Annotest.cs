@@ -12,8 +12,10 @@ namespace Day22UserResigstrationProblem
         public static void Display()
         {
             CheckValidation check = new CheckValidation();
-            Console.WriteLine("Enter Your Name");
-            check.Name = Console.ReadLine();
+            Console.WriteLine("Enter Your FirstName");
+            check.FirstName = Console.ReadLine();
+            Console.WriteLine("Enter Your LastName");
+            check.LastName = Console.ReadLine();
 
             ValidationContext con = new ValidationContext(check);
             List<ValidationResult> results = new List<ValidationResult>();
@@ -23,13 +25,13 @@ namespace Day22UserResigstrationProblem
             {
                 foreach (ValidationResult i in results)
                 {
-                    Console.WriteLine("Member Name : {0}", i.MemberNames);
+                    Console.WriteLine("Member Name : {0}", i.MemberNames.First());
                     Console.WriteLine("Error Message : {0}", i.ErrorMessage);
                 }
             }
             else
             {
-                Console.WriteLine(" Name :" + check.Name);
+                Console.WriteLine(" FirstName :" + check.FirstName + " LasttName :" + check.LastName);
             }
         }
     }
