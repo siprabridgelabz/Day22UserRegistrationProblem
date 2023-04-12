@@ -16,6 +16,9 @@ namespace Day22UserResigstrationProblem
             check.FirstName = Console.ReadLine();
             Console.WriteLine("Enter Your LastName");
             check.LastName = Console.ReadLine();
+            Console.WriteLine("Enter Your Email");
+            check.Email = Console.ReadLine();
+
 
             ValidationContext con = new ValidationContext(check);
             List<ValidationResult> results = new List<ValidationResult>();
@@ -31,7 +34,7 @@ namespace Day22UserResigstrationProblem
             }
             else
             {
-                Console.WriteLine(" FirstName :" + check.FirstName + " LasttName :" + check.LastName);
+                Console.WriteLine(" FirstName :" + check.FirstName + "\n LasttName :" + check.LastName + "\n email :" + check.Email);
             }
         }
     }
