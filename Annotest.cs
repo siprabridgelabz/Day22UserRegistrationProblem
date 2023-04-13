@@ -20,6 +20,8 @@ namespace Day22UserResigstrationProblem
             check.Email = Console.ReadLine();
             Console.WriteLine("Enter Your Phone Number");
             check.Phone = Console.ReadLine();
+            Console.WriteLine("Enter Your Password");
+            check.Password = Console.ReadLine();
 
 
 
@@ -37,7 +39,7 @@ namespace Day22UserResigstrationProblem
             }
             else
             {
-                Console.WriteLine(" FirstName :" + check.FirstName + "\n LasttName :" + check.LastName + "\n email :" + check.Email + "\n PhoneNumber : " + check.Phone);
+                Console.WriteLine(" FirstName :" + check.FirstName + "\n LasttName :" + check.LastName + "\n email :" + check.Email + "\n PhoneNumber : " + check.Phone + "\n Password : " + check.Password);
             }
         }
     }
