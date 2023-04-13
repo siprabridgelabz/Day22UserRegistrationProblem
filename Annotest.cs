@@ -12,6 +12,7 @@ namespace Day22UserResigstrationProblem
         public static void Display()
         {
             CheckValidation check = new CheckValidation();
+
             Console.WriteLine("Enter Your FirstName");
             check.FirstName = Console.ReadLine();
             Console.WriteLine("Enter Your LastName");
@@ -41,6 +42,7 @@ namespace Day22UserResigstrationProblem
             {
                 Console.WriteLine(" FirstName :" + check.FirstName + "\n LasttName :" + check.LastName + "\n email :" + check.Email + "\n PhoneNumber : " + check.Phone + "\n Password : " + check.Password);
             }
+
         }
     }
 }
